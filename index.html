@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sanothimi Campus</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="jquery/jquery.mobile-1.4.5.min.css"/>
+		<script src="jquery/jquery-1.11.2.min.js"></script>
+		<script src="jquery/jquery.mobile-1.4.5.min.js"></script>
+		<script src="cordova.js"></script>
+		<script type="text/javascript" charset="utf-8">
+
+    // Call onDeviceReady when Cordova is loaded.
+    //
+    // At this point, the document has loaded but cordova-2.0.0.js has not.
+    // When Cordova is loaded and talking with the native device,
+    // it will call the event `deviceready`.
+    //
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+
+    // Cordova is loaded and it is now safe to call Cordova methods
+    //
+    function onDeviceReady() {
+        // Register the event listener
+        document.addEventListener("backbutton", onBackKeyDown, false);
+    }
+
+    // Handle the back button
+    //
+    function onBackKeyDown() {
+		navigator.app.exitApp();
+    }
+
+    </script>
+	</head>
+	<body onload="onLoad()">
+		<div data-role="page" data-theme="b">
+			<div data-role="header" style="text-align:center;" data-tap-toggle="false"
+			 data-position="fixed">
+				<img style="margin-top:10px; max-width: 100%;" src="img/header.png"/>
+			</div>
+			<div data-role="main" class="ui-content">
+				<a href="aboutus.html" class="ui-btn ui-mini">ABOUT US</a>
+			 <a href="massege.html" class="ui-btn ui-mini">MESSAGE</a>
+			  <a href="Departments.html" class="ui-btn ui-mini">DEPARTMENTS</a>
+			  <a href="galary.html" class="ui-btn ui-mini">GALLARY</a>
+				<a href="#" class="ui-btn ui-mini">EVENTS</a>
+				<a href="info.html" class="ui-btn ui-mini">ABOUT APP</a>
+				
+			</div>
+			<div data-role="footer" style="text-align:center;" data-tap-toggle="false" data-position="fixed">
+				
+		<img style="margin-top:10px; max-width: 100%;" src="img/footer.png"/>
+	
+			</div>
+		</div>
+	</body>
+</html>
